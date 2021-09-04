@@ -15,7 +15,7 @@ mongoose
 // configure app to use bodyParser() and cors() -------------------------------
 const app = express();
 
-// app.use(customCors())
+app.use(customCors())
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

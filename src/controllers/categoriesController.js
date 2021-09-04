@@ -25,7 +25,7 @@ exports.retrieveOne = async (req, res) => {
   }
 };
 
-exports.create = async (req, res, next) => {
+exports.create = async (req, res) => {
   try {
     const { statusCode, result } = await createCategory(req.body);
     return res.status(statusCode).send(result);
@@ -34,7 +34,7 @@ exports.create = async (req, res, next) => {
   }
 };
 
-exports.update = async (req, res, next) => {
+exports.update = async (req, res) => {
   try {
     const { id } = req.params;
     const { statusCode, result } = await updateCategory(id, req.body);
